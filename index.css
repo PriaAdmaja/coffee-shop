@@ -17,8 +17,16 @@ body {
     color: var(--color-text-primary);
 }
 
+body a {
+    text-decoration: none;
+    color: inherit;
+}
+
 header {
     margin: 0 150px;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
 }
 
 nav {
@@ -26,13 +34,18 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin: 40px 0px;
-    
 }
 
 nav p {
     font-size: 1.25rem;
     font-weight: bold;
 }
+
+/* .main-nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
 
 nav section {
     display: flex;
@@ -63,10 +76,79 @@ nav ul {
     background-color: var(--color-primary);
 }
 
+#burger {
+    position: relative;
+}
+
+.burger-check {
+    opacity: 0;
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    transform: scale(2);
+}
+
+.mobile-nav {
+    position: absolute;
+    right: 0;
+    bottom: -1;
+    width: 80%;
+    height: 80vh;
+    background-color: var(--color-background-primary);
+    border-radius: 0 0 0 20px;
+    padding: 30px 10% 40px;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 600;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    box-shadow: -4px 6px 23px -6px rgba(0,0,0,0.4);
+-webkit-box-shadow: -4px 6px 23px -6px rgba(0,0,0,0.4);
+-moz-box-shadow: -4px 6px 23px -6px rgba(0,0,0,0.4);
+transition: ease-in-out;
+}
+
+.mobile-nav ul {
+    padding-left: 0;
+}
+
+.mobile-nav ul li {
+    list-style-type: none;
+    
+}
+
+.mobile-nav .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    
+}
+
+.mobile-nav .user-option-mbl {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sign-up-mbl {
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 10px;
+}
+
+.user-option-mbl .sign-up {
+
+}
+
 .opening {
     color: #ffffff;
     padding: 0px 150px;
-    background-image: url('./images/3\ cup\ of\ coffee.jpg');
+    background-image: url('./images/3\ cup\ of\ coffee.webp');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -221,7 +303,7 @@ nav ul {
     padding-top: 250px;
     display: grid;
     grid-template-columns: auto auto auto;
-    
+    overflow: scroll;
     
 }
 
@@ -646,7 +728,6 @@ footer {
 .logo {
     display: flex;
     align-items: center; 
-    margin-right: auto;
     gap: 15px;
     
 }
@@ -659,7 +740,11 @@ footer {
 
 .burger-menu {
     display: none;
+    cursor: pointer;
+    user-select: none;
 }
+
+
 
 @media screen and (min-width:1441px) {
     
@@ -706,9 +791,10 @@ footer {
     }
 
     .menu-favorite>section {
-        grid-template-columns: auto auto;
+        /* grid-template-columns: auto auto; */
         padding-top: 150px;
-        grid-row-gap: 100px;
+        /* grid-row-gap: 100px; */
+        grid-column-gap: 50px;
     }
 
     .map {
@@ -748,7 +834,7 @@ footer {
     
     
     header>nav {
-        padding: 5%;
+        padding: 5% 0;
         margin: 0;
     }
 
@@ -763,6 +849,7 @@ footer {
     .burger-menu {
         display: inline;
     }
+
    
     main {
         padding: 0;
@@ -776,9 +863,9 @@ footer {
         font-size: 1rem;
     }
 
-    .images-cover {
-        
-    }
+   .review {
+    padding: 50px 5%;
+   }
 
     .value {
         flex-direction: column;
@@ -845,9 +932,9 @@ footer {
         padding: 50px 5% 0;
     }
     
-    .menu-favorite>section {
+    /* .menu-favorite>section {
         grid-template-columns: auto;
-    }
+    } */
 
     .statistic {
         flex-direction: column;
@@ -874,11 +961,18 @@ footer {
     }
 
     .partner>div {
-        gap: 20px;
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
+
+    .menu-desc>div {
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .menu-card {
-        width: 100%;
+        width: 280px;
+        height: 500px;
     }
 
     .review {
@@ -915,7 +1009,8 @@ footer {
     }
 
     .footer-link {
-        justify-content: space-around;
+        justify-content: start;
+        gap: 25%;
     }
 
     .footer-desc {

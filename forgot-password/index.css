@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    background-image: url('../images/four\ coffee.jpg');
+    background-image: url('../images/four\ coffee.webp');
     background-position: center;
     background-size: cover;
     display: flex;
@@ -265,7 +265,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 471px) {
     header {
         padding: 8%;
         font-weight: 700;
@@ -287,7 +287,11 @@ footer {
     }
 
     .input-area>input {
-        width: 80%;
+        width: 100%;
+    }
+
+    .input-area button {
+        width: 100%;
     }
 
     header p {
@@ -298,7 +302,7 @@ footer {
         gap: 10px;
     }
     .wait>button {
-        width: 50%;
+        width: 100%;
     }
     .main-footer {
         flex-direction: column-reverse;
@@ -306,7 +310,8 @@ footer {
     }
 
     .footer-link {
-        justify-content: space-around;
+        justify-content: start;
+        gap: 25%;
     }
 
     .footer-desc {
@@ -333,7 +338,7 @@ footer {
     }
 
     .wait>button {
-        width: 60%;
+        width: 100%;
         font-size: 1rem;
     }
 }

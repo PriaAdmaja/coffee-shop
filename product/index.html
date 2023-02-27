@@ -21,6 +21,10 @@
                 <img src="../images/coffee icon.png" alt="icon" width="30px" />
                 <p>Coffee Shop</p>
             </div>
+            <div id="burger">
+                <img src="../images/menu.png" alt="menu" style="transform:scaleX(-1)" class="burger-menu">
+                <input type="checkbox" class="burger-check" id="burger-check">
+            </div>
             <ul class="nav-menu">
                 <li>Home</li>
                 <li class="active">Product</li>
@@ -38,8 +42,25 @@
                     <img src="../images/user picture.png" alt="user">
                 </div>
             </div>
-            <img src="../images/menu.png" alt="menu" style="transform:scaleX(-1)" class="burger-menu">
+            
         </nav>
+       
+        <section class="mobile-nav" id="mobile-nav">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <hr>
+                <li><a href="/product/index.html">Product</a></li>
+                <hr>
+                <li><a href="#">Your Cart</a></li>
+                <hr>
+                <li>History</li>
+            </ul>
+
+            <ul class="user-option-mbl">
+                <li><a href="/login/index.html">Message</a></li>
+                <li class="sign-up-mbl"><a href="/profile/index.html">Profile</a></li>
+            </ul>
+        </section>
     </header>
 
     <main>
@@ -257,6 +278,7 @@
             </div>
         </section>
     </footer>
+    <script src="/product/product.js"></script>
 </body>
 
 </html>
