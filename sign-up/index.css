@@ -407,6 +407,10 @@ footer {
         font-weight: 400;
     }
 
+    #password-msg {
+        font-size: 0.8rem;
+    }
+    
     .login>section {
         padding: 0;
     }
