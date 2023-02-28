@@ -22,14 +22,21 @@ const userData = {
 }
 
 const signUp = () => {
-    userData.email = inputEmail.value
-    userData.password = inputPassword.value
-    userData.phone = inputPhone.value
 
-    modal.style.display = 'flex'
-    modalMark.style.backgroundColor = '#23ad5c'
-    markSymbol.innerHTML = '&check;'
-    modalMessage.innerHTML = 'Success'
+    if (inputEmail.value === '' || inputPassword.value === '' || inputPhone.value === '') {
+        modal.style.display = 'flex'
+        modalMark.style.backgroundColor = '#ff4757'
+        markSymbol.innerHTML = '&#10060;'
+        modalMessage.innerHTML = 'Failed'
+    } else {
+        userData.email = inputEmail.value
+        userData.password = inputPassword.value
+        userData.phone = inputPhone.value
+        modal.style.display = 'flex'
+        modalMark.style.backgroundColor = '#23ad5c'
+        markSymbol.innerHTML = '&check;'
+        modalMessage.innerHTML = 'Success'
+    }
 
     setTimeout(() => {
         modal.style.display = 'none'
