@@ -68,7 +68,7 @@ inputPassword.addEventListener('input', () => {
         passMsg.innerHTML = 'Your password is too weak'
         passMsg.style.color = '#ff4757'
     } else if (strength < 5) {
-        passMsg.innerHTML = 'Add more combination'
+        passMsg.innerHTML = 'Must contain alphabeth, number & symbol'
         passMsg.style.color = '#ffa500'
     } else {
         passMsg.innerHTML = 'Good password'
