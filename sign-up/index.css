@@ -410,7 +410,7 @@ footer {
     #password-msg {
         font-size: 0.8rem;
     }
-    
+
     .login>section {
         padding: 0;
     }
@@ -526,6 +526,10 @@ footer {
 
     .banner .title {
         padding-bottom: 10px;
+    }
+
+    #password-msg {
+        font-size: 0.6rem;
     }
 
     .banner>div {
